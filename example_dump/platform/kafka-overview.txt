@@ -1,0 +1,11 @@
+URL: https://confluence.example.com/display/PLAT/Kafka+Overview
+# Kafka Platform Overview
+
+The platform team runs three Kafka clusters: prod-events, prod-logs, and
+staging. Topics are provisioned through Terraform in the infra-kafka repo;
+direct topic creation in production is disabled.
+
+## Retention and quotas
+Default retention is 7 days; prod-logs is 3 days. Producer quotas are enforced
+per service account. Consumer lag alerts page the platform on-call when lag
+exceeds 100k messages for 15 minutes.

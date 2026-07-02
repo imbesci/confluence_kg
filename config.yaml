@@ -1,0 +1,37 @@
+# Paths
+source_dir: ./confluence_dump   # your scraped Confluence text files
+kg_dir: ./knowledge             # the git-committed knowledge tree (output)
+build_dir: ./build              # disposable artifacts (vector index) — gitignored
+
+llm:
+  model: claude-sonnet-4-6      # claude-haiku-4-5-20251001 is ~5x cheaper if quality allows
+  max_tokens: 1500
+  max_workers: 8                # parallel LLM calls
+  max_retries: 5
+
+organize:                       # LLM taxonomy — only used when the dump is flat
+  enabled: auto                 # auto | always | never
+  max_top_categories: 12
+  allow_subcategories: true
+  assign_batch_size: 80
+
+summarize:
+  page_max_words: 120
+  section_max_words: 250
+  root_max_words: 400
+  max_input_chars: 24000
+
+crosslink:
+  enabled: true
+  similarity_threshold: 0.60
+  top_k_per_page: 8
+  max_candidates: 300
+  confirm_batch_size: 20
+
+index:
+  backend: st                   # st = sentence-transformers (local, free). dummy = offline smoke tests only
+  model: sentence-transformers/all-MiniLM-L6-v2
+  chunk_max_chars: 3000
+
+search:
+  top_k: 8

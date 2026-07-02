@@ -1,0 +1,11 @@
+URL: https://confluence.example.com/display/SEC/Incident+Response
+# Security Incident Response
+
+Suspected security incidents are reported in #security-incidents or to
+security@example.com. The security on-call triages within 30 minutes.
+
+## Roles
+Every SEV-1 security incident gets an incident commander, a comms lead, and a
+scribe. Legal is looped in before any external disclosure. Post-incident
+reviews are blameless and due within five business days, filed in the
+incident-reviews Confluence space.

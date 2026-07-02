@@ -1,0 +1,10 @@
+URL: https://confluence.example.com/display/PEOPLE/Onboarding
+# Engineering Onboarding Checklist
+
+New engineers get laptop and access provisioning through the IT portal on day
+one. Managers assign an onboarding buddy for the first four weeks.
+
+Week 1 covers dev environment setup and the deploy process walkthrough.
+Week 2 includes shadowing the on-call rotation and an intro to the incident
+response process. All new engineers complete security training in the first
+30 days.

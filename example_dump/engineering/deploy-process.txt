@@ -1,0 +1,13 @@
+URL: https://confluence.example.com/display/ENG/Deploy+Process
+# Deploy Process
+
+All services deploy through the CI pipeline in GitHub Actions. Merges to main
+trigger a canary deploy to 5% of traffic for 30 minutes before full rollout.
+
+## Rollbacks
+Rollbacks use the deploy bot in #deploys: `/rollback <service> <version>`.
+During a SEV-1 incident, the on-call engineer may roll back without review.
+
+## Freeze windows
+Deploy freezes apply during Black Friday week and the last two business days
+of each quarter. The release manager (currently Dana K.) approves exceptions.

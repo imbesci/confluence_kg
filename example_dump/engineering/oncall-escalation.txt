@@ -1,0 +1,15 @@
+URL: https://confluence.example.com/display/ENG/On-Call+Escalation
+# On-Call Escalation Policy
+
+The primary on-call engineer is paged first via PagerDuty. If a SEV-1 page is
+not acknowledged within 10 minutes, PagerDuty escalates to the secondary
+on-call, then to the engineering manager after a further 10 minutes.
+
+## Severity levels
+SEV-1 means customer-facing outage. SEV-2 means degraded service with a
+workaround. SEV-3 is internal-only impact and is handled in business hours.
+
+## Handoffs
+Weekly rotation hands off Mondays at 10:00 ET in the #oncall Slack channel.
+The outgoing engineer posts open incidents and any silenced alerts. Platform
+team owns the Kafka and Postgres alert policies.
